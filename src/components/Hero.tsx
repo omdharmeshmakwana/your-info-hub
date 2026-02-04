@@ -69,9 +69,12 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-accent-gradient text-accent-foreground hover:opacity-90 glow-accent px-8 group"
+                asChild
               >
-                Start Free Trial
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <a href="mailto:dineinnpro@gmail.com?subject=Book%20a%20Demo%20-%20DineInnPro&body=Hello%20DineInnPro%20Team%2C%0A%0AI%20would%20like%20to%20book%20a%20demo%20of%20your%20restaurant%20management%20system.%0A%0AMy%20Details%3A%0A%0AName%3A%20%0ARestaurant%20Name%3A%20%0APhone%20Number%3A%20%0AAddress%3A%20%0A%0APreferred%20Demo%20Date%2FTime%3A%20%0A%0AThank%20you!">
+                  Book Demo
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <Button 
                 size="lg" 
