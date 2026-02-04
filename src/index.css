@@ -6,30 +6,30 @@
 
 @layer base {
   :root {
-    /* Core brand colors */
-    --background: 210 20% 98%;
-    --foreground: 222 47% 11%;
+    /* Core brand colors - Light Warm Theme */
+    --background: 40 33% 98%;
+    --foreground: 25 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 25 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 25 30% 15%;
 
-    /* Primary: Deep Navy - Tech Professional */
-    --primary: 222 47% 11%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Warm Brown - Restaurant Professional */
+    --primary: 25 40% 25%;
+    --primary-foreground: 40 33% 98%;
 
-    /* Secondary: Warm slate */
-    --secondary: 215 20% 95%;
-    --secondary-foreground: 222 47% 11%;
+    /* Secondary: Warm cream */
+    --secondary: 40 30% 94%;
+    --secondary-foreground: 25 30% 15%;
 
     /* Muted tones */
-    --muted: 215 20% 92%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 40 25% 90%;
+    --muted-foreground: 25 15% 45%;
 
-    /* Accent: Warm Orange - Restaurant Warmth */
-    --accent: 24 95% 53%;
+    /* Accent: Rich Orange-Gold - Restaurant Warmth */
+    --accent: 28 85% 50%;
     --accent-foreground: 0 0% 100%;
 
     /* Restaurant amber glow */
@@ -37,37 +37,37 @@
     --amber-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 24 95% 53%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 28 85% 50%;
 
     --radius: 0.75rem;
 
-    /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(222 47% 18%) 50%, hsl(215 35% 25%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(38 92% 50%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+    /* Custom gradients - Light warm theme */
+    --gradient-hero: linear-gradient(135deg, hsl(28 85% 50%) 0%, hsl(38 92% 55%) 50%, hsl(45 80% 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(28 85% 50%) 0%, hsl(38 92% 50%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 33% 97%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,248,240,0.9) 100%);
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    --shadow-glow: 0 0 40px -10px hsl(24 95% 53% / 0.4);
-    --shadow-card: 0 4px 20px -4px rgba(0, 0, 0, 0.08);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    --shadow-glow: 0 0 40px -10px hsl(28 85% 50% / 0.3);
+    --shadow-card: 0 4px 20px -4px rgba(0, 0, 0, 0.06);
 
     /* Sidebar */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 40 30% 97%;
+    --sidebar-foreground: 25 30% 25%;
+    --sidebar-primary: 25 40% 25%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 40 25% 92%;
+    --sidebar-accent-foreground: 25 30% 15%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 28 85% 50%;
   }
 
   .dark {
