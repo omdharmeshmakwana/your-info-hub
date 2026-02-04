@@ -12,16 +12,34 @@ const stats = [
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Light warm background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-from)_0%,_transparent_50%)] from-accent/15" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-from)_0%,_transparent_50%)] from-amber/10" />
+      {/* Light pinkish peach background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-peach-50 via-rose-50 to-peach-100" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-from)_0%,_transparent_50%)] from-accent/20" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-from)_0%,_transparent_50%)] from-peach/15" />
+      
+      {/* Floating animated shapes */}
+      <motion.div 
+        className="absolute top-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl"
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div 
+        className="absolute bottom-20 left-10 w-96 h-96 bg-peach/10 rounded-full blur-3xl"
+        animate={{ 
+          scale: [1.2, 1, 1.2],
+          opacity: [0.2, 0.4, 0.2],
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
       
       {/* Grid pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c2410c' fill-opacity='1'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e57373' fill-opacity='1'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}
       />
 
@@ -86,7 +104,7 @@ const Hero = () => {
               </Button>
             </motion.div>
 
-            {/* Stats */}
+            {/* Stats with staggered animations */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -94,27 +112,42 @@ const Hero = () => {
               className="flex items-center justify-center lg:justify-start gap-8 md:gap-12"
             >
               {stats.map((stat, index) => (
-                <div key={index} className="text-center lg:text-left">
+                <motion.div 
+                  key={index} 
+                  className="text-center lg:text-left"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                >
                   <div className="flex items-center gap-2 mb-1">
-                    <stat.icon className="w-5 h-5 text-accent" />
+                    <motion.div
+                      animate={{ rotate: [0, 10, -10, 0] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
+                    >
+                      <stat.icon className="w-5 h-5 text-accent" />
+                    </motion.div>
                     <span className="text-2xl md:text-3xl font-bold text-foreground">
                       {stat.value}
                     </span>
                   </div>
                   <p className="text-xs md:text-sm text-muted-foreground">{stat.label}</p>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Image with enhanced animations */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <motion.div 
+              className="relative rounded-2xl overflow-hidden shadow-2xl"
+              whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+            >
               <img
                 src={heroImage}
                 alt="DineInnPro Dashboard"
@@ -122,16 +155,20 @@ const Hero = () => {
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-            </div>
+            </motion.div>
             
-            {/* Floating card */}
+            {/* Floating card with bounce animation */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="absolute -bottom-6 -left-6 glass-card rounded-xl p-4 shadow-xl hidden md:block"
             >
-              <div className="flex items-center gap-3">
+              <motion.div 
+                className="flex items-center gap-3"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              >
                 <div className="w-12 h-12 rounded-full bg-accent-gradient flex items-center justify-center">
                   <QrCode className="w-6 h-6 text-accent-foreground" />
                 </div>
@@ -139,20 +176,28 @@ const Hero = () => {
                   <p className="font-semibold text-foreground">QR Menu & Orders</p>
                   <p className="text-sm text-muted-foreground">Contactless dining</p>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
 
-            {/* Floating badge */}
+            {/* Floating badge with pulse animation */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
               className="absolute -top-4 -right-4 glass-card rounded-xl px-4 py-2 shadow-xl hidden md:block"
             >
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <motion.div 
+                className="flex items-center gap-2"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <motion.div 
+                  className="w-2 h-2 rounded-full bg-accent"
+                  animate={{ opacity: [1, 0.5, 1] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                />
                 <span className="text-sm font-medium text-foreground">Live Analytics</span>
-              </div>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
@@ -170,7 +215,11 @@ const Hero = () => {
           transition={{ duration: 1.5, repeat: Infinity }}
           className="w-6 h-10 border-2 border-foreground/20 rounded-full flex justify-center pt-2"
         >
-          <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+          <motion.div 
+            className="w-1.5 h-1.5 rounded-full bg-accent"
+            animate={{ opacity: [1, 0.3, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          />
         </motion.div>
       </motion.div>
     </section>
