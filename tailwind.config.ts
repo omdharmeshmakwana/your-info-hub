@@ -42,6 +42,21 @@ export default {
         amber: {
           DEFAULT: "hsl(var(--amber))",
           foreground: "hsl(var(--amber-foreground))",
+          50: "hsl(48 100% 96%)",
+          100: "hsl(48 96% 89%)",
+          200: "hsl(48 97% 77%)",
+        },
+        orange: {
+          50: "hsl(33 100% 96%)",
+          100: "hsl(34 100% 92%)",
+          200: "hsl(32 98% 83%)",
+        },
+        yellow: {
+          50: "hsl(55 92% 95%)",
+        },
+        hero: {
+          DEFAULT: "hsl(40 33% 98%)",
+          light: "hsl(33 100% 96%)",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",

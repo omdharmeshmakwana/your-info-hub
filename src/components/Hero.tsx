@@ -12,16 +12,16 @@ const stats = [
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-hero-gradient" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(24_95%_53%_/_0.1),_transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(38_92%_50%_/_0.1),_transparent_50%)]" />
+      {/* Light warm background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-from)_0%,_transparent_50%)] from-accent/15" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-from)_0%,_transparent_50%)] from-amber/10" />
       
       {/* Grid pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c2410c' fill-opacity='1'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}
       />
 
@@ -43,7 +43,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6"
             >
               Revolutionizing{" "}
               <span className="text-gradient">Restaurant</span>{" "}
@@ -54,7 +54,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-primary-foreground/70 mb-8 max-w-xl mx-auto lg:mx-0"
+              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
               All-in-one restaurant management system with smart menu, orders, billing, 
               staff & inventory management. Go paperless, go digital with DineInnPro.
@@ -76,7 +76,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                className="border-foreground/20 text-foreground hover:bg-foreground/5"
               >
                 <Play className="w-4 h-4 mr-2" />
                 Watch Demo
@@ -94,11 +94,11 @@ const Hero = () => {
                 <div key={index} className="text-center lg:text-left">
                   <div className="flex items-center gap-2 mb-1">
                     <stat.icon className="w-5 h-5 text-accent" />
-                    <span className="text-2xl md:text-3xl font-bold text-primary-foreground">
+                    <span className="text-2xl md:text-3xl font-bold text-foreground">
                       {stat.value}
                     </span>
                   </div>
-                  <p className="text-xs md:text-sm text-primary-foreground/60">{stat.label}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">{stat.label}</p>
                 </div>
               ))}
             </motion.div>
@@ -165,7 +165,7 @@ const Hero = () => {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex justify-center pt-2"
+          className="w-6 h-10 border-2 border-foreground/20 rounded-full flex justify-center pt-2"
         >
           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
         </motion.div>
