@@ -39,24 +39,24 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        amber: {
-          DEFAULT: "hsl(var(--amber))",
-          foreground: "hsl(var(--amber-foreground))",
-          50: "hsl(48 100% 96%)",
-          100: "hsl(48 96% 89%)",
-          200: "hsl(48 97% 77%)",
+        peach: {
+          DEFAULT: "hsl(var(--peach))",
+          foreground: "hsl(var(--peach-foreground))",
+          50: "hsl(20 80% 97%)",
+          100: "hsl(18 76% 92%)",
+          200: "hsl(16 72% 85%)",
         },
-        orange: {
-          50: "hsl(33 100% 96%)",
-          100: "hsl(34 100% 92%)",
-          200: "hsl(32 98% 83%)",
+        rose: {
+          50: "hsl(355 100% 97%)",
+          100: "hsl(355 100% 94%)",
+          200: "hsl(352 96% 90%)",
         },
-        yellow: {
-          50: "hsl(55 92% 95%)",
+        pink: {
+          50: "hsl(327 73% 97%)",
         },
         hero: {
-          DEFAULT: "hsl(40 33% 98%)",
-          light: "hsl(33 100% 96%)",
+          DEFAULT: "hsl(20 50% 98%)",
+          light: "hsl(18 80% 96%)",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -116,8 +116,16 @@ export default {
           "50%": { transform: "translateY(-10px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px -10px hsl(24 95% 53% / 0.4)" },
-          "50%": { boxShadow: "0 0 40px -10px hsl(24 95% 53% / 0.6)" },
+          "0%, 100%": { boxShadow: "0 0 20px -10px hsl(12 76% 65% / 0.4)" },
+          "50%": { boxShadow: "0 0 40px -10px hsl(12 76% 65% / 0.6)" },
+        },
+        "bounce-subtle": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
       animation: {
@@ -129,6 +137,8 @@ export default {
         "scale-in": "scale-in 0.4s ease-out forwards",
         "float": "float 3s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "bounce-subtle": "bounce-subtle 2s ease-in-out infinite",
+        "shimmer": "shimmer 3s linear infinite",
       },
     },
   },
