@@ -39,24 +39,29 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        peach: {
-          DEFAULT: "hsl(var(--peach))",
-          foreground: "hsl(var(--peach-foreground))",
-          50: "hsl(20 80% 97%)",
-          100: "hsl(18 76% 92%)",
-          200: "hsl(16 72% 85%)",
+        ivory: {
+          DEFAULT: "hsl(var(--ivory))",
+          foreground: "hsl(var(--ivory-foreground))",
+          50: "hsl(40 40% 98%)",
+          100: "hsl(40 35% 96%)",
+          200: "hsl(40 30% 92%)",
+          300: "hsl(40 25% 88%)",
         },
-        rose: {
-          50: "hsl(355 100% 97%)",
-          100: "hsl(355 100% 94%)",
-          200: "hsl(352 96% 90%)",
+        cream: {
+          50: "hsl(45 50% 97%)",
+          100: "hsl(45 45% 94%)",
+          200: "hsl(45 40% 90%)",
+          300: "hsl(45 35% 85%)",
+          500: "hsl(45 30% 70%)",
         },
-        pink: {
-          50: "hsl(327 73% 97%)",
+        warm: {
+          50: "hsl(35 45% 97%)",
+          100: "hsl(35 40% 94%)",
+          500: "hsl(35 50% 65%)",
         },
         hero: {
-          DEFAULT: "hsl(20 50% 98%)",
-          light: "hsl(18 80% 96%)",
+          DEFAULT: "hsl(40 40% 98%)",
+          light: "hsl(45 45% 97%)",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",

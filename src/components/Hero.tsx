@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Play, Sparkles, Users, LayoutDashboard, QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-restaurant.jpg";
+import { AnimatedSphere3D, AnimatedTorus3D, AnimatedCube3D, ParticleField3D } from "@/components/Animations3D";
 
 const stats = [
   { icon: Users, value: "15+", label: "Role-Based Panels" },
@@ -12,34 +13,41 @@ const stats = [
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Light pinkish peach background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-peach-50 via-rose-50 to-peach-100" />
+      {/* Warm ivory and cream background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-ivory-50 via-cream-50 to-warm-50" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-from)_0%,_transparent_50%)] from-accent/20" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-from)_0%,_transparent_50%)] from-peach/15" />
-      
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-from)_0%,_transparent_50%)] from-ivory/15" />
+
+      {/* 3D Animated Elements */}
+      <ParticleField3D />
+      <AnimatedSphere3D size={250} color="#d4b896" position={{ top: "10%", right: "15%" }} delay={0.2} />
+      <AnimatedSphere3D size={180} color="#e8d5b7" position={{ bottom: "15%", left: "8%" }} delay={0.4} />
+      <AnimatedTorus3D size={200} color="#c9a876" position={{ top: "40%", left: "5%" }} delay={0.6} />
+      <AnimatedCube3D size={120} color="#d4b896" position={{ bottom: "25%", right: "20%" }} delay={0.8} />
+
       {/* Floating animated shapes */}
-      <motion.div 
+      <motion.div
         className="absolute top-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl"
-        animate={{ 
+        animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
-      <motion.div 
-        className="absolute bottom-20 left-10 w-96 h-96 bg-peach/10 rounded-full blur-3xl"
-        animate={{ 
+      <motion.div
+        className="absolute bottom-20 left-10 w-96 h-96 bg-ivory/10 rounded-full blur-3xl"
+        animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.2, 0.4, 0.2],
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
-      
+
       {/* Grid pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e57373' fill-opacity='1'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4b896' fill-opacity='1'%3E%3Ccircle cx='1' cy='1' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}
       />
 
@@ -74,7 +82,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              All-in-one restaurant management system with smart menu, orders, billing, 
+              All-in-one restaurant management system with smart menu, orders, billing,
               staff & inventory management. Go paperless, go digital with DineInnPro.
             </motion.p>
 
@@ -84,8 +92,8 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-12"
             >
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-accent-gradient text-accent-foreground hover:opacity-90 glow-accent px-8 group"
                 asChild
               >
@@ -94,9 +102,9 @@ const Hero = () => {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="border-foreground/20 text-foreground hover:bg-foreground/5"
               >
                 <Play className="w-4 h-4 mr-2" />
@@ -112,8 +120,8 @@ const Hero = () => {
               className="flex items-center justify-center lg:justify-start gap-8 md:gap-12"
             >
               {stats.map((stat, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   className="text-center lg:text-left"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -144,7 +152,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <motion.div 
+            <motion.div
               className="relative rounded-2xl overflow-hidden shadow-2xl"
               whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
             >
@@ -156,7 +164,7 @@ const Hero = () => {
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </motion.div>
-            
+
             {/* Floating card with bounce animation */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -164,7 +172,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="absolute -bottom-6 -left-6 glass-card rounded-xl p-4 shadow-xl hidden md:block"
             >
-              <motion.div 
+              <motion.div
                 className="flex items-center gap-3"
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -186,12 +194,12 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="absolute -top-4 -right-4 glass-card rounded-xl px-4 py-2 shadow-xl hidden md:block"
             >
-              <motion.div 
+              <motion.div
                 className="flex items-center gap-2"
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
-                <motion.div 
+                <motion.div
                   className="w-2 h-2 rounded-full bg-accent"
                   animate={{ opacity: [1, 0.5, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
@@ -215,7 +223,7 @@ const Hero = () => {
           transition={{ duration: 1.5, repeat: Infinity }}
           className="w-6 h-10 border-2 border-foreground/20 rounded-full flex justify-center pt-2"
         >
-          <motion.div 
+          <motion.div
             className="w-1.5 h-1.5 rounded-full bg-accent"
             animate={{ opacity: [1, 0.3, 1] }}
             transition={{ duration: 1.5, repeat: Infinity }}

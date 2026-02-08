@@ -46,11 +46,11 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-xl bg-accent-gradient flex items-center justify-center">
                 <ChefHat className="w-6 h-6 text-accent-foreground" />
               </div>
-              <span className="text-xl font-bold text-primary-foreground">
+              <span className="text-xl font-bold text-foreground">
                 Dine<span className="text-gradient">Inn</span>Pro
               </span>
             </a>
-            <p className="text-primary-foreground/70 mb-6 max-w-xs">
+            <p className="text-muted-foreground mb-6 max-w-xs">
               Revolutionizing restaurant operations with smart, seamless, and scalable technology.
             </p>
             {/* Social Links */}
@@ -60,9 +60,9 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors group"
+                  className="w-10 h-10 rounded-full bg-muted/20 flex items-center justify-center hover:bg-accent transition-colors group"
                 >
-                  <social.icon className="w-5 h-5 text-primary-foreground/70 group-hover:text-accent-foreground" />
+                  <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-foreground" />
                 </a>
               ))}
             </div>
@@ -70,13 +70,13 @@ const Footer = () => {
 
           {/* Product Links */}
           <div>
-            <h4 className="font-semibold text-primary-foreground mb-4">Product</h4>
+            <h4 className="font-semibold text-foreground mb-4">Product</h4>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -87,13 +87,13 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h4 className="font-semibold text-primary-foreground mb-4">Company</h4>
+            <h4 className="font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -104,13 +104,13 @@ const Footer = () => {
 
           {/* Resources Links */}
           <div>
-            <h4 className="font-semibold text-primary-foreground mb-4">Resources</h4>
+            <h4 className="font-semibold text-foreground mb-4">Resources</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -121,13 +121,13 @@ const Footer = () => {
 
           {/* Legal Links */}
           <div>
-            <h4 className="font-semibold text-primary-foreground mb-4">Legal</h4>
+            <h4 className="font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-sm"
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -138,12 +138,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-primary-foreground/10">
+        <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-primary-foreground/60 text-sm">
+            <p className="text-muted-foreground text-sm">
               © 2025 DineInnPro. All rights reserved.
             </p>
-            <p className="text-primary-foreground/60 text-sm">
+            <p className="text-muted-foreground text-sm">
               Founded by Om Makwana & Dhruv Gothi | Mumbai, Maharashtra, India
             </p>
           </div>
