@@ -61,8 +61,8 @@ const Hero = () => {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6"
             >
-              <Sparkles className="w-4 h-4 text-accent" />
-              <span className="text-sm font-medium text-accent">Version 1.0 Now Available</span>
+              <Sparkles className="w-4 h-4 text-black" />
+              <span className="text-sm font-medium text-black">Version 1.0 Now Available</span>
             </motion.div>
 
             <motion.h1
