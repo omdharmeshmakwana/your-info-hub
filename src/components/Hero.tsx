@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-restaurant.jpg";
 import { AnimatedSphere3D, AnimatedTorus3D, AnimatedCube3D, ParticleField3D } from "@/components/Animations3D";
 
 const stats = [
-  { icon: Users, value: "15+", label: "Role-Based Panels" },
+  { icon: Users, value: "20+", label: "Premium Outlets" },
   { icon: LayoutDashboard, value: "30+", label: "Smart Features" },
   { icon: QrCode, value: "100%", label: "Contactless Operations" },
 ];
@@ -82,8 +82,8 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              All-in-one restaurant management system with smart menu, orders, billing,
-              staff & inventory management. Go paperless, go digital with DineInnPro.
+              Powering 20+ premium outlets across India. Replace manual processes with a
+              seamless, all-digital cloud platform for menus, orders, and staff management.
             </motion.p>
 
             <motion.div

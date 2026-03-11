@@ -108,24 +108,31 @@ const panels = [
 ];
 
 const allFeatures = [
-  { icon: Users, title: "Multiple Role-Based Panels", description: "Owner, Store Manager, Chef, Waiter, Guest access" },
-  { icon: UtensilsCrossed, title: "Digital Menu Management", description: "Categories, images & QR-based access" },
-  { icon: QrCode, title: "Guest Ordering System", description: "Scan, browse, add to cart, checkout" },
-  { icon: Receipt, title: "Point of Sale (POS)", description: "Dine-in, delivery & pickup order types" },
-  { icon: CreditCard, title: "Smart Billing & Payments", description: "Discounts, GST, cash, card, UPI, partial" },
-  { icon: ClipboardList, title: "Kitchen Order Ticket (KOT)", description: "Seamless kitchen updates integration" },
-  { icon: Clock, title: "Order Tracking", description: "Live status updates across all roles" },
-  { icon: Package, title: "Inventory & Expense", description: "Low-stock alerts and exportable reports" },
-  { icon: Users, title: "Staff Management", description: "Profiles, attendance, payroll, shifts" },
-  { icon: Car, title: "Valet Parking System", description: "Car tokens, notifications, tracking" },
-  { icon: Megaphone, title: "Promotions & Offers", description: "Custom discounts, auto-generate PDFs" },
-  { icon: MessageSquare, title: "Feedback & Polls", description: "Guest insights and quick opinions" },
-  { icon: Heart, title: "Tips & Recognition", description: "Digital tipping with staff acknowledgment" },
-  { icon: BarChart3, title: "Reports & Analytics", description: "Revenue, profit, top dishes, peak hours" },
-  { icon: Gift, title: "Customer Engagement", description: "Offers, loyalty, feedback sentiment" },
-  { icon: Lock, title: "Role-Based Security", description: "Login, password recovery, plan control" },
-  { icon: Languages, title: "Multi-language Support", description: "English, Hindi, Gujarati" },
-  { icon: Leaf, title: "Paperless Operations", description: "QR ordering, digital bills, online payments" },
+  {
+    icon: UtensilsCrossed,
+    title: "Smart Digital Menu",
+    description: "Instantly update prices and availability across all touchpoints.",
+  },
+  {
+    icon: ChefHat,
+    title: "Seamless Kitchen Integration",
+    description: "Orders go directly to the kitchen display system (KDS), reducing errors and delays.",
+  },
+  {
+    icon: Shield,
+    title: "Role-Based Access",
+    description: "Specialized panels for Admins, Managers, Chefs, and Waiters to ensure operational security.",
+  },
+  {
+    icon: BarChart3,
+    title: "Smart Analytics",
+    description: "Track sales and staff performance with auto-generated, insightful reports.",
+  },
+  {
+    icon: Leaf,
+    title: "Paperless Billing",
+    description: "Digital invoices sent directly to guests for a modern, contactless experience.",
+  },
 ];
 
 const Features = () => {
@@ -145,14 +152,14 @@ const Features = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
-            What It Offers
+            Verified Features
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Key Capabilities to{" "}
-            <span className="text-gradient">Streamline Operations</span>
+            Handbook-Verified{" "}
+            <span className="text-gradient">Functionalities</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Role-based panels designed for every team member. From ownership to kitchen to service.
+            Five core capabilities that power 20+ premium outlets across India — built for speed, accuracy, and modern dining.
           </p>
         </motion.div>
 
@@ -162,7 +169,7 @@ const Features = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16"
         >
           {allFeatures.map((feature, index) => (
             <motion.div

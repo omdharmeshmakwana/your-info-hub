@@ -1,43 +1,25 @@
 import { motion } from "framer-motion";
 import {
   LayoutDashboard,
-  Shield,
-  Zap,
-  ChefHat,
-  BarChart3,
-  QrCode
+  WifiOff,
+  MonitorPlay,
 } from "lucide-react";
 
 const usps = [
   {
     icon: LayoutDashboard,
-    title: "All-in-One Dashboard",
-    description: "Manage tables, orders, billing, inventory, and staff from a single, unified interface.",
+    title: "Unified Interface",
+    description: "Manage tables, inventory, and billing from one single dashboard — no switching between apps.",
   },
   {
-    icon: Shield,
-    title: "Role-Based Access",
-    description: "Custom permissions for admins, managers, chefs, and waiters to ensure security & efficiency.",
+    icon: WifiOff,
+    title: "Offline Resilience",
+    description: "Reliable operations designed for the \"Bharat\" market — keeps working even with unstable internet.",
   },
   {
-    icon: Zap,
-    title: "Real-Time Menu Updates",
-    description: "Instantly update prices, item availability, and specials across all customer touchpoints.",
-  },
-  {
-    icon: ChefHat,
-    title: "Seamless Kitchen Integration",
-    description: "Orders go directly to the kitchen display system, reducing delays and errors.",
-  },
-  {
-    icon: BarChart3,
-    title: "Smart Analytics & Reports",
-    description: "Track sales, stock, and staff performance with insightful, auto-generated reports.",
-  },
-  {
-    icon: QrCode,
-    title: "Paperless & Contactless",
-    description: "QR-based ordering, digital bills, and virtual table management for modern dining.",
+    icon: MonitorPlay,
+    title: "Quick Demo Login",
+    description: "Allow potential clients to experience role-specific dashboards instantly — no setup required.",
   },
 ];
 
@@ -64,7 +46,7 @@ const USPSection = () => {
             Competitive <span className="text-gradient">Advantages</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Stand out from the competition with features designed for the modern restaurant industry.
+            The edge that sets DineInnPro apart — built for modern Indian dining, from metro to Bharat.
           </p>
         </motion.div>
 

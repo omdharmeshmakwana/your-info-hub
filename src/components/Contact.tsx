@@ -10,13 +10,13 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    value: "support@dineinnpro.com",
+    value: "dineinnpro@gmail.com",
     description: "We'll respond within 24 hours",
   },
   {
     icon: Phone,
     title: "Call Us",
-    value: "+91 98765 43210",
+    value: "+91 9324175216",
     description: "Mon-Sat, 9AM to 6PM IST",
   },
   {
